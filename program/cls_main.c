@@ -16,8 +16,8 @@ int main(int argc, const char **argv) {
 
     if (argc != 2)
     {
-        printf("Could not open current directory!!!!\n");
-        return 1;
+        argv[1] = ".";
+        //printf("%s" ,argv[1]);
     }
     // opendir() returns a pointer of DIR type.
     DIR *dr = opendir(argv[1]);
